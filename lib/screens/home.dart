@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:pokeapi_dogger/api/pokeapi.dart';
 import 'package:pokeapi_dogger/models/PokeModel.dart';
 import 'package:pokeapi_dogger/widgets/pokemon_grid.dart';
@@ -43,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PokemonGrid(pokemon: pokemon,)
+      body: PokemonGrid(pokemon: pokemon)
     );
   }
 }
