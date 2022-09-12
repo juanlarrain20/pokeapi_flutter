@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokeapi_dogger/models/pokeModel.dart';
+import 'package:pokeapi_dogger/models/PokeModel.dart';
 import 'package:pokeapi_dogger/widgets/pokemon_card.dart';
 
 class PokemonGrid extends StatefulWidget {
