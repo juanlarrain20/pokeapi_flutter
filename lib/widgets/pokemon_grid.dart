@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapi_dogger/models/pokeModel.dart';
-
+import 'package:pokeapi_dogger/widgets/pokemon_card.dart';
 
 class PokemonGrid extends StatefulWidget {
   final List<Pokemon> pokemon;
 
-  PokemonGrid({Key? key, required this.pokemon}) : super(key: key);
+  const PokemonGrid({Key? key, required this.pokemon}) : super(key: key);
 
   @override
   State<PokemonGrid> createState() => _PokemonGridState();
@@ -28,10 +28,17 @@ class _PokemonGridState extends State<PokemonGrid> {
       crossAxisSpacing: 4,
       mainAxisSpacing: 4,
       semanticChildCount: 250,
-      childAspectRatio: 200/244,
+      childAspectRatio: 200 / 244,
       physics: const BouncingScrollPhysics(),
       children: widget.pokemon
-            .map((pokemon) => Container()).toList()
+          .map(
+            (pokemon) => PokemonCard(
+              id: pokemon.id,
+              name: pokemon.name,
+              image: pokemon.img,
+            ),
+          )
+          .toList(),
     );
   }
 }
