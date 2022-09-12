@@ -4,11 +4,10 @@ import 'package:pokeapi_dogger/widgets/pokemon_card.dart';
 
 class PokemonGrid extends StatefulWidget {
   final List<Pokemon> pokemon;
-
   const PokemonGrid({Key? key, required this.pokemon}) : super(key: key);
 
   @override
-  State<PokemonGrid> createState() => _PokemonGridState();
+  _PokemonGridState createState() => _PokemonGridState();
 }
 
 class _PokemonGridState extends State<PokemonGrid> {
@@ -22,6 +21,7 @@ class _PokemonGridState extends State<PokemonGrid> {
             : (width > 450)
                 ? 3
                 : 2;
+
     return GridView.count(
       padding: const EdgeInsets.all(7),
       crossAxisCount: crossAxisCount,

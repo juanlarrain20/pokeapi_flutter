@@ -13,7 +13,7 @@ class PokemonCardBackground extends StatelessWidget {
       style: TextStyle(
         fontSize: 101,
         fontWeight: FontWeight.bold,
-        color: Colors.greenAccent[200],
+        color: Colors.grey[200],
       ),
     );
   }
