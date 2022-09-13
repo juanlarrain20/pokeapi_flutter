@@ -42,6 +42,7 @@ class _HomeState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Pokedex"),
+        backgroundColor: Colors.redAccent,
       ),
       body: PokemonGrid(pokemon: pokemon),
       floatingActionButton: FloatingActionButton(
