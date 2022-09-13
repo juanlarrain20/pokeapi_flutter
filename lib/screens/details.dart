@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapi_dogger/models/pokemon_screen_data.dart';
-import 'package:pokeapi_dogger/widgets/detail_title.dart';
-import 'package:pokeapi_dogger/widgets/details_data.dart';
-import 'package:pokeapi_dogger/widgets/details_image.dart';
+import 'package:pokeapi_dogger/widgets/details.widgets.dart';
 
 
 class DetailsPage extends StatelessWidget {
@@ -24,6 +22,8 @@ class DetailsPage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartFloat,
+      floatingActionButton: const DetailBackButton(),
     );
   }
 }

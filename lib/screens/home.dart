@@ -3,8 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:pokeapi_dogger/api/pokeapi.dart';
 import 'package:pokeapi_dogger/models/PokeModel.dart';
-import 'package:pokeapi_dogger/widgets/pokemon_card.dart';
-import 'package:pokeapi_dogger/widgets/pokemon_grid.dart';
+import 'package:pokeapi_dogger/widgets/pokemon_card.widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

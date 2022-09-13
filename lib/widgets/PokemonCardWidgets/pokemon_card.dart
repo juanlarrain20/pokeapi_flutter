@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapi_dogger/models/pokemon_screen_data.dart';
-import 'package:pokeapi_dogger/widgets/pokemon_card_background.dart';
-import 'package:pokeapi_dogger/widgets/pokemon_card_data.dart';
+import 'package:pokeapi_dogger/widgets/PokemonCardWidgets/pokemon_card_background.dart';
+import 'package:pokeapi_dogger/widgets/PokemonCardWidgets/pokemon_card_data.dart';
 
 class PokemonCard extends StatelessWidget {
   final int id;
