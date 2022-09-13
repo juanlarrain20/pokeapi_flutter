@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokeapi_dogger/models/pokemon_screen_data.dart';
 import 'package:pokeapi_dogger/widgets/pokemon_card_background.dart';
 import 'package:pokeapi_dogger/widgets/pokemon_card_data.dart';
 
@@ -25,14 +26,27 @@ class PokemonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(7),
-      decoration: getContainerDecoration(),
-      child: Stack(
-        children: [
-          PokemonCardBackground(id: id),
-          PokemonCardData(image: image, name: name),
-        ],
+    return Material(
+      color: Colors.white,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(7),
+        onTap: () => {
+          Navigator.pushNamed(
+            context,
+            '/details',
+            arguments: PokemonScreenData(id, name, image),
+          ),
+        },
+        child: Container(
+          padding: const EdgeInsets.all(7),
+          decoration: getContainerDecoration(),
+          child: Stack(
+            children: [
+              PokemonCardBackground(id: id),
+              PokemonCardData(image: image, name: name),
+            ],
+          ),
+        ),
       ),
     );
   }
