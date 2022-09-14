@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class DetailsImage extends StatelessWidget {
   final String image;
+  final int id;
   const DetailsImage({
     super.key,
     required this.image,
+    required this.id,
   });
 
   @override
@@ -23,10 +25,13 @@ class DetailsImage extends StatelessWidget {
               ),
               
             ),
-            Image.network(
-              image,
-              fit: BoxFit.contain,
-              alignment: Alignment.center,
+            Hero(
+              tag: 'image-$id',
+              child: Image.network(
+                image,
+                fit: BoxFit.contain,
+                alignment: Alignment.center,
+              ),
             )
           ],
         ),

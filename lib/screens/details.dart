@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:pokeapi_dogger/models/pokemon_screen_data.dart';
 import 'package:pokeapi_dogger/widgets/details.widgets.dart';
 
-
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({super.key});
+  final int? id;
+  final String? name;
+  final String? image;
+  const DetailsPage({
+    super.key,
+    this.id,
+    this.name,
+    this.image,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final arguments = ModalRoute.of(context)!.settings.arguments as PokemonScreenData;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
@@ -16,9 +22,9 @@ class DetailsPage extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            DetailsImage(image: arguments.img),
-            DetailsTitle(id: arguments.id, name: arguments.name),
-            DetailsData(id: arguments.id)
+            DetailsImage(image: image!, id: id!),
+            DetailsTitle(id: id!, name: name!),
+            DetailsData(id: id!)
           ],
         ),
       ),
