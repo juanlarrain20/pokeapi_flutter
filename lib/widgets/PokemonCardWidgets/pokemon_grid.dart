@@ -27,7 +27,7 @@ class _PokemonGridState extends State<PokemonGrid> {
       crossAxisCount: crossAxisCount,
       crossAxisSpacing: 4,
       mainAxisSpacing: 4,
-      semanticChildCount: 250,
+      semanticChildCount: 500,
       childAspectRatio: 200 / 244,
       physics: const BouncingScrollPhysics(),
       children: widget.pokemon
