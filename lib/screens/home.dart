@@ -29,8 +29,8 @@ class _HomeState extends State<HomePage> {
         pokemon = data.asMap().entries.map<Pokemon>((element) {
           element.value['id'] = element.key + 1;
           element.value['img'] =
-              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${element.key + 1}.png";
-//              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${element.key + 1}.png";
+//              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${element.key + 1}.png";
+              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${element.key + 1}.png";
           return Pokemon.fromJson(element.value);
         }).toList();
       });
