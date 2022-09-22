@@ -46,7 +46,6 @@ class _HomeState extends State<HomePage> {
       ),
       body: PokemonGrid(pokemon: pokemon),
       floatingActionButton: FloatingActionButton(
-        
         heroTag: 'fab',
         onPressed: () {},
         tooltip: 'Share',
