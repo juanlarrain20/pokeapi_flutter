@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class DetailsData extends StatelessWidget {
   final int id;
-  const DetailsData({super.key, required this.id});
+  final String type;
+  const DetailsData({super.key, required this.id, required this.type});
 
   @override
   Widget build(BuildContext context) {

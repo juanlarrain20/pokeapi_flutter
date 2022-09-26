@@ -6,13 +6,13 @@ class DetailsPage extends StatelessWidget {
   final int? id;
   final String? name;
   final String? image;
-  final String? type;
+  final String? weight;
   const DetailsPage({
     super.key,
     this.id,
     this.name,
     this.image,
-    this.type,
+    this.weight,
   });
 
   @override
@@ -26,7 +26,7 @@ class DetailsPage extends StatelessWidget {
           children: [
             DetailsImage(image: image!, id: id!),
             DetailsTitle(id: id!, name: name!),
-            DetailsData(id: id!)
+            DetailsData(id: id!, type: weight!,)
           ],
         ),
       ),
