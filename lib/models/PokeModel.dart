@@ -8,5 +8,6 @@ class Pokemon {
         name = data['name'],
         img = data['img'];
 
-  Map<String, dynamic> toJson() => {'id': id, 'name': name, 'img': img};
+
+  Map<String, dynamic> toJson() => {'id': id, 'name': name, 'img': img,};
 }

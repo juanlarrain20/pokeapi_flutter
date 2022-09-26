@@ -6,11 +6,13 @@ class DetailsPage extends StatelessWidget {
   final int? id;
   final String? name;
   final String? image;
+  final String? type;
   const DetailsPage({
     super.key,
     this.id,
     this.name,
     this.image,
+    this.type,
   });
 
   @override
