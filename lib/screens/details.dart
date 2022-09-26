@@ -26,7 +26,7 @@ class DetailsPage extends StatelessWidget {
           children: [
             DetailsImage(image: image!, id: id!),
             DetailsTitle(id: id!, name: name!),
-            DetailsData(id: id!, type: weight!,)
+            DetailsData(id: id!,)
           ],
         ),
       ),
