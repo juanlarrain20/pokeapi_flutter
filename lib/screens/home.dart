@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:pokeapi_dogger/api/pokeapi.dart';
 import 'package:pokeapi_dogger/models/PokeModel.dart';
@@ -20,6 +21,15 @@ class _HomeState extends State<HomePage> {
     super.initState();
     getPokemonFromPokeApi();
   }
+/*
+  Future<List<Pokemon>> getPokemons() async{
+    url = Uri
+    for(int i = 1; i <=5; i++){
+    http.Response response = await http.get();
+    final decoded = json.decode(response.body);
+    }
+  }
+  */
 
   void getPokemonFromPokeApi() async {
     PokeApi.getPokemon().then((response) {
