@@ -15,24 +15,25 @@ class HomePage extends StatefulWidget {
 
 class _HomeState extends State<HomePage> {
   List<Pokemon> pokemon = List.empty();
+  List<Pokemon> pokemons = List.empty();
 
   @override
   void initState() {
     super.initState();
     getPokemonFromPokeApi();
-
+    getPokemons();
   }
-/*
-  Future<List<Pokemon>> getPokemons() async{
-    for(int i = 1; i <=5; i++){
-    http.Response response = await http.get(Uri.parse('https://pokeapi.co/api/v2/pokemon/1/${i}'));
-    final decoded = json.decode(response.body);
 
-    print(decoded['name']);
+  Future<List<Pokemon>> getPokemons() async{
+    for(int i = 1; i <=6; i++){
+      http.Response response = await http.get(Uri.parse('https://pokeapi.co/api/v2/pokemon/${i}'));
+      final decoded = json.decode(response.body);
+
+      pokemons.add(Pokemon.fromJson(decoded));
     }
     return pokemon; 
   }
- */ 
+
 
   void getPokemonFromPokeApi() async {
     PokeApi.getPokemon().then((response) {
@@ -61,7 +62,7 @@ class _HomeState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         heroTag: 'fab',
         onPressed: () {
-          //getPokemons();
+          getPokemons();
         },
         tooltip: 'Share',
         child: const Icon(
