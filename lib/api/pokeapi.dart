@@ -6,5 +6,5 @@ class PokeApi{
   static Future<http.Response> getPokemon() => 
       http.get(Uri.parse("https://pokeapi.co/api/v2/pokemon?limit=500"));
   
-  
+ 
 }

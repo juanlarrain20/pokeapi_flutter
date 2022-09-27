@@ -1,19 +1,21 @@
 class Pokemon {
   int id;
   String name;
+  String url;
   String img;
 
 
   Pokemon.fromJson(Map<String, dynamic> data)
-      : id = data['id'],
-        name = data['name'],
-        img = data['img'];
+      : id    = data['id'],
+        name  = data['name'],
+        url   = data['url'] ?? 'google.com',
+        img   = data['img'] ?? 'google.com';
 
 
   Map<String, dynamic> toJson() => {
-        'id': id,
+        'id'  : id,
         'name': name,
-        'img': img,
-
+        'url' : url,
+        'img' : img,
       };
 }

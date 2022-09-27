@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokeapi_dogger/models/PokeModel.dart';
 import 'package:pokeapi_dogger/models/pokemon_screen_data.dart';
 import 'package:pokeapi_dogger/widgets/details.widgets.dart';
 
@@ -14,6 +15,9 @@ class DetailsPage extends StatelessWidget {
     this.image,
     this.weight,
   });
+
+  
+
 
   @override
   Widget build(BuildContext context) {
