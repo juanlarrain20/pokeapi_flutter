@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:pokeapi_dogger/api/pokeapi.dart';
 import 'package:pokeapi_dogger/models/PokeModel.dart';
+import 'package:pokeapi_dogger/widgets/DetailsPageWidets/pokemon_card_detail.dart';
 import 'package:pokeapi_dogger/widgets/pokemon_card.widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,13 +16,13 @@ class HomePage extends StatefulWidget {
 
 class _HomeState extends State<HomePage> {
   List<Pokemon> pokemon = List.empty();
-  List<Pokemon> pokemons = List.empty();
+  List<Pokemon> pokemons = [];
 
   @override
   void initState() {
+    getPokemons();
     super.initState();
     getPokemonFromPokeApi();
-    getPokemons();
   }
 
   Future<List<Pokemon>> getPokemons() async{
@@ -31,7 +32,7 @@ class _HomeState extends State<HomePage> {
 
       pokemons.add(Pokemon.fromJson(decoded));
     }
-    return pokemon; 
+    return pokemons; 
   }
 
 
@@ -50,19 +51,20 @@ class _HomeState extends State<HomePage> {
       });
     });
   }
+  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Pokedex"),
+        title: const Text('Pokedex'),
         backgroundColor: Colors.redAccent,
       ),
       body: PokemonGrid(pokemon: pokemon),
       floatingActionButton: FloatingActionButton(
         heroTag: 'fab',
         onPressed: () {
-          getPokemons();
+          
         },
         tooltip: 'Share',
         child: const Icon(
