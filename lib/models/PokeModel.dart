@@ -20,5 +20,6 @@ class Pokemon {
         'height': height,
         'url' : url,
         'img' : img,
+        
       };
 }
