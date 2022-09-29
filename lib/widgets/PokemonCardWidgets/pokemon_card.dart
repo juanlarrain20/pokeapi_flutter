@@ -6,6 +6,7 @@ import 'package:pokeapi_dogger/widgets/PokemonCardWidgets/pokemon_card_data.dart
 
 class PokemonCard extends StatelessWidget {
   final int id;
+  final int height;
   final String name;
   final String image;
 
@@ -14,6 +15,7 @@ class PokemonCard extends StatelessWidget {
     required this.id,
     required this.name,
     required this.image,
+    required this.height,
   }) : super(key: key);
 
   void navigate(BuildContext context) {
@@ -24,6 +26,7 @@ class PokemonCard extends StatelessWidget {
               id: id,
               name: name,
               image: image,
+              height: height,
             )),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(

@@ -7,13 +7,13 @@ class DetailsPage extends StatelessWidget {
   final int? id;
   final String? name;
   final String? image;
-  final String? weight;
+  final int? height;
   const DetailsPage({
     super.key,
     this.id,
     this.name,
     this.image,
-    this.weight,
+    this.height
   });
 
   
@@ -29,7 +29,7 @@ class DetailsPage extends StatelessWidget {
         child: Column(
           children: [
             DetailsImage(image: image!, id: id!),
-            DetailsTitle(id: id!, name: name!),
+            DetailsTitle(id: id!, name: name!, height: height!,),
             DetailsData(id: id!,)
           ],
         ),

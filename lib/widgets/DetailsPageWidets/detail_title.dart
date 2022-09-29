@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class DetailsTitle extends StatelessWidget {
   final int id;
   final String name;
-  const DetailsTitle({super.key, required this.id, required this.name});
+  final int height;
+  const DetailsTitle({super.key, required this.id, required this.name, required this.height});
 
   @override
   Widget build(BuildContext context) {

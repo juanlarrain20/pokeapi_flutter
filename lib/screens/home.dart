@@ -20,18 +20,19 @@ class _HomeState extends State<HomePage> {
 
   @override
   void initState() {
-    getPokemons();
     super.initState();
-    getPokemonFromPokeApi();
+    getPokemons();
+    //getPokemonFromPokeApi();
   }
 
   Future<List<Pokemon>> getPokemons() async{
-    for(int i = 1; i <=6; i++){
+    for(int i = 1; i <=7; i++){
       http.Response response = await http.get(Uri.parse('https://pokeapi.co/api/v2/pokemon/${i}'));
       final decoded = json.decode(response.body);
-
       pokemons.add(Pokemon.fromJson(decoded));
     }
+   
+
     return pokemons; 
   }
 
@@ -60,7 +61,7 @@ class _HomeState extends State<HomePage> {
         title: const Text('Pokedex'),
         backgroundColor: Colors.redAccent,
       ),
-      body: PokemonGrid(pokemon: pokemon),
+      body: PokemonGrid(pokemon: pokemons),
       floatingActionButton: FloatingActionButton(
         heroTag: 'fab',
         onPressed: () {
