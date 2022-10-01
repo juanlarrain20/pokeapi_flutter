@@ -22,3 +22,4 @@ class Pokemon {
         'img' : img,
       };
 }
+
