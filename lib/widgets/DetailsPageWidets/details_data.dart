@@ -26,6 +26,7 @@ class DetailsData extends StatelessWidget {
       ),
       child: Column(
         children: [
+          
         ],
       ),
     );
